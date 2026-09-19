@@ -1,0 +1,111 @@
+{
+  "foodEntries": [
+    {
+      "id": "fd001",
+      "sourceName": "Central Institute Mess",
+      "sourceType": "Institutional Kitchen",
+      "foodType": "Cooked Rice & Dal",
+      "category": "Cooked Meal",
+      "quantityKg": 18,
+      "preparedAt": "2026-09-19T08:00:00.000Z",
+      "expiryAt": "2026-09-19T14:00:00.000Z",
+      "status": "redistributed",
+      "predictedWasteKg": 6,
+      "confidence": 0.86,
+      "location": {
+        "lat": 28.4595,
+        "lng": 77.0266,
+        "area": "Gurugram Sector 29"
+      }
+    },
+    {
+      "id": "fd002",
+      "sourceName": "Sunrise Catering Unit",
+      "sourceType": "Food Processing Unit",
+      "foodType": "Vegetable Sandwiches",
+      "category": "Packaged",
+      "quantityKg": 9,
+      "preparedAt": "2026-09-19T09:30:00.000Z",
+      "expiryAt": "2026-09-19T18:00:00.000Z",
+      "status": "fresh",
+      "predictedWasteKg": 1,
+      "confidence": 0.74,
+      "location": {
+        "lat": 28.4646,
+        "lng": 77.0345,
+        "area": "Gurugram Sector 44"
+      }
+    }
+  ],
+  "ngos": [
+    {
+      "id": "ngo001",
+      "name": "Seva Food Bank",
+      "type": "NGO",
+      "capacityKgPerDay": 40,
+      "location": {
+        "lat": 28.4601,
+        "lng": 77.031,
+        "area": "Gurugram Sector 31"
+      },
+      "contact": "9810012345"
+    },
+    {
+      "id": "ngo002",
+      "name": "Asha Community Shelter",
+      "type": "Shelter",
+      "capacityKgPerDay": 25,
+      "location": {
+        "lat": 28.47,
+        "lng": 77.04,
+        "area": "Gurugram Sector 45"
+      },
+      "contact": "9810098765"
+    },
+    {
+      "id": "ngo003",
+      "name": "Anna Daan Kitchen",
+      "type": "Community Kitchen",
+      "capacityKgPerDay": 60,
+      "location": {
+        "lat": 28.455,
+        "lng": 77.02,
+        "area": "Gurugram Sector 14"
+      },
+      "contact": "9810055555"
+    }
+  ],
+  "redistributions": [
+    {
+      "id": "rdgRuO_h",
+      "foodId": "fd001",
+      "ngoId": "ngo001",
+      "status": "verified",
+      "requestedAt": "2026-09-19T15:56:30.093Z",
+      "history": [
+        {
+          "status": "requested",
+          "at": "2026-09-19T15:56:30.093Z"
+        },
+        {
+          "status": "picked-up",
+          "at": "2026-09-19T15:56:33.369Z"
+        },
+        {
+          "status": "delivered",
+          "at": "2026-09-19T15:56:34.571Z"
+        },
+        {
+          "status": "verified",
+          "at": "2026-09-19T15:56:35.954Z"
+        }
+      ]
+    }
+  ],
+  "historyStats": {
+    "totalFoodSavedKg": 360,
+    "totalMealsRedistributed": 1185,
+    "co2SavedKg": 216,
+    "moneySaved": 29940
+  }
+}
