@@ -762,14 +762,26 @@ button {
   .pl-72 h1 {
     font-size: clamp(1.35rem, 6vw, 2rem) !important;
     line-height: 1.2 !important;
-    overflow-wrap: anywhere;
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
   }
 
   .pl-64 h2,
   .pl-72 h2,
   .pl-64 h3,
   .pl-72 h3 {
-    overflow-wrap: anywhere;
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .pl-64 section h2,
+  .pl-72 section h2 {
+    flex: 1 1 auto;
+    width: auto;
   }
 
   .pl-64 img,
