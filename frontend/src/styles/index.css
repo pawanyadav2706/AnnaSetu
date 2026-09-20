@@ -637,6 +637,75 @@ button {
     overflow-x: hidden;
   }
 
+  /* Dashboard prototypes use a fixed desktop sidebar and a left offset. */
+  aside.fixed.left-0 {
+    display: none !important;
+  }
+
+  .pl-64,
+  .pl-72 {
+    padding-left: 0 !important;
+  }
+
+  .pl-64 > header,
+  .pl-72 > header,
+  header.fixed.left-64,
+  header.fixed.left-72 {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+  }
+
+  .pl-64 > main,
+  .pl-72 > main {
+    width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden;
+  }
+
+  .pl-64 main > div,
+  .pl-72 main > div {
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .pl-64 [class*="grid-cols-"],
+  .pl-72 [class*="grid-cols-"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .pl-64 [class*="w-["],
+  .pl-72 [class*="w-["] {
+    max-width: 100% !important;
+  }
+
+  .pl-64 h1,
+  .pl-72 h1 {
+    font-size: clamp(1.35rem, 6vw, 2rem) !important;
+    line-height: 1.2 !important;
+    overflow-wrap: anywhere;
+  }
+
+  .pl-64 h2,
+  .pl-72 h2,
+  .pl-64 h3,
+  .pl-72 h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .pl-64 img,
+  .pl-72 img,
+  .pl-64 svg,
+  .pl-72 svg {
+    max-width: 100%;
+  }
+
+  .pl-64 button,
+  .pl-72 button {
+    max-width: 100%;
+    white-space: normal;
+  }
+
   .prototype-landing-shell > header nav {
     display: none !important;
   }
