@@ -601,6 +601,32 @@ button {
   display: none;
 }
 
+/* Shared dashboard surface treatment for the operational pages. */
+.pl-64 > main > div,
+.pl-72 > main > div {
+  color: #18352a;
+}
+
+.pl-64 section,
+.pl-72 section {
+  border: 1px solid rgba(205, 220, 210, 0.7);
+  box-shadow: 0 8px 24px rgba(22, 58, 43, 0.06);
+}
+
+.pl-64 span[class*="rounded-full"][class*="px-"],
+.pl-72 span[class*="rounded-full"][class*="px-"],
+.pl-64 div[class*="rounded-full"][class*="px-"],
+.pl-72 div[class*="rounded-full"][class*="px-"] {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.25;
+}
+
 .prototype-landing-shell main > div > section {
   scroll-margin-top: 76px;
 }
@@ -639,6 +665,44 @@ button {
 
   /* Dashboard prototypes use a fixed desktop sidebar and a left offset. */
   aside.fixed.left-0 {
+    position: relative !important;
+    display: flex !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0.7rem 1rem !important;
+    flex-direction: column !important;
+    gap: 0.55rem;
+    border-bottom: 1px solid #dce8df;
+    box-shadow: 0 2px 12px rgba(22, 58, 43, 0.08) !important;
+  }
+
+  aside.fixed.left-0 > div:first-child {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  aside.fixed.left-0 nav {
+    display: flex !important;
+    width: 100%;
+    gap: 0.35rem;
+    padding: 0 !important;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  aside.fixed.left-0 nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  aside.fixed.left-0 nav a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 0.6rem 0.75rem !important;
+    font-size: 0.76rem !important;
+  }
+
+  aside.fixed.left-0 > div:last-child {
     display: none !important;
   }
 
@@ -661,6 +725,21 @@ button {
     width: 100% !important;
     min-width: 0 !important;
     overflow-x: hidden;
+    padding: 0.9rem !important;
+  }
+
+  .pl-64 > main > div,
+  .pl-72 > main > div {
+    gap: 0.9rem !important;
+  }
+
+  .pl-64 > header,
+  .pl-72 > header {
+    position: relative !important;
+    top: auto !important;
+    height: auto !important;
+    min-height: 3.5rem;
+    padding: 0.8rem 1rem !important;
   }
 
   .pl-64 main > div,
@@ -704,6 +783,40 @@ button {
   .pl-72 button {
     max-width: 100%;
     white-space: normal;
+  }
+
+  .pl-64 span[class*="rounded-full"][class*="px-"],
+  .pl-72 span[class*="rounded-full"][class*="px-"],
+  .pl-64 div[class*="rounded-full"][class*="px-"],
+  .pl-72 div[class*="rounded-full"][class*="px-"] {
+    padding: 0.35rem 0.65rem !important;
+    font-size: 0.7rem !important;
+  }
+
+  .pl-64 [class*="gap-space-md"],
+  .pl-72 [class*="gap-space-md"] {
+    gap: 0.75rem !important;
+  }
+
+  .pl-64 [class*="text-headline-"],
+  .pl-72 [class*="text-headline-"] {
+    letter-spacing: -0.01em;
+  }
+
+  .pl-64 section,
+  .pl-72 section {
+    border-radius: 0.8rem !important;
+  }
+
+  .pl-64 [class*="p-space-lg"],
+  .pl-72 [class*="p-space-lg"] {
+    padding: 1rem !important;
+  }
+
+  .pl-64 [class*="min-w-[260px]"],
+  .pl-72 [class*="min-w-[260px]"] {
+    min-width: 0 !important;
+    width: 100%;
   }
 
   .prototype-landing-shell > header nav {
