@@ -1,0 +1,11 @@
+{
+  "name": "annasetu-prototype",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AnnaSetu food rescue prototype",
+  "scripts": {
+    "build": "npm run build --prefix frontend",
+    "dev": "npm run dev --prefix frontend",
+    "install:frontend": "npm install --prefix frontend"
+  }
+}
