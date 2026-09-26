@@ -17,30 +17,24 @@ const processFlow = [
 ];
 
 const keyFeatures = [
-  { icon: "near_me", label: "Location based nearest kitchen / partner" },
-  { icon: "hub", label: "Smart redistribution matching" },
-  { icon: "verified_user", label: "Secure role-based access" },
+  { icon: "near_me", label: "Location based nearest kitchen" },
+  { icon: "eco", label: "Circular economy · biogas / compost" },
+  { icon: "task_alt", label: "Receive & verify pickup" },
   { icon: "bar_chart", label: "Dashboard & analytics" },
 ];
 
-const initialRequests = [
-  { id: 1, name: "Ananya R.", detail: "Hostel Mess · B-Block · Dal Tadka & Rice", status: "Completed" },
-  { id: 2, name: "Rahul K.", detail: "Hostel Mess · C-Block · Dal Tadka & Rice", status: "Pending review" },
+const initialScraps = [
+  { id: 1, item: "Potato peels & vegetable scraps", detail: "12 kg · IIT Hyderabad Dining Hall", status: "Available" },
+  { id: 2, item: "Rice & dal leftovers (not for human use)", detail: "8 kg · TCS Cafeteria", status: "Available" },
 ];
 
-const incoming = [
-  ["Dal Tadka & Jeera Rice", "200 servings · 64.8 C", "Arriving"],
-  ["Kitchen verification", "IIT Hyderabad · KTC-042", "Verified"],
-  ["Dining setup", "Warmers and plates ready", "Ready"],
-];
-
-export default function NgoPrototype() {
-  const [requests, setRequests] = useState(initialRequests);
+export default function AnimalPrototype() {
+  const [scraps, setScraps] = useState(initialScraps);
   const [notice, setNotice] = useState("");
 
-  function markVerified(id) {
-    setRequests((prev) => prev.map((r) => (r.id === id ? { ...r, status: "Verified · handled by NGO" } : r)));
-    setNotice("Request verified");
+  function acceptPickup(id) {
+    setScraps((prev) => prev.map((s) => (s.id === id ? { ...s, status: "Accepted · pickup scheduled" } : s)));
+    setNotice("Pickup accepted");
     window.setTimeout(() => setNotice(""), 2000);
   }
 
@@ -63,53 +57,40 @@ export default function NgoPrototype() {
 
       <main className="simple-main">
         <header className="simple-header">
-          <div><span className="eyebrow">Admin / NGO portal</span><p className="date-line">Wednesday, 23 September 2026</p></div>
-          <div className="header-user"><span className="avatar">AS</span><span>Admin / NGO portal</span></div>
+          <div><span className="eyebrow">Animal shelter portal</span><p className="date-line">Wednesday, 23 September 2026</p></div>
+          <div className="header-user"><span className="avatar">AS</span><span>Animal shelter portal</span></div>
         </header>
 
         <div className="simple-content">
           <section className="intro-row">
-            <div><h1>Robin Hood Army · South Hyderabad</h1><p>Verify partners and accept safe, useful meals for your community.</p></div>
+            <div><h1>Street Paws Shelter, Hyderabad</h1><p>Receive kitchen scraps and peels that are safe for animal feeding, tracked and verified.</p></div>
             <button className="primary-button" type="button" onClick={() => setNotice("Capacity confirmed")}>
               <span className="material-symbols-outlined">bolt</span>Confirm capacity
             </button>
           </section>
 
           <section className="metric-grid" aria-label="Summary metrics">
-            <article className="metric"><span>Today's capacity</span><strong>350</strong><small>Meals</small></article>
-            <article className="metric"><span>Already served</span><strong>280</strong><small>80% complete</small></article>
-            <article className="metric"><span>Kitchens verified</span><strong>42</strong><small>Active</small></article>
+            <article className="metric"><span>Today's capacity</span><strong>120</strong><small>Kg</small></article>
+            <article className="metric"><span>Already received</span><strong>70</strong><small>58% complete</small></article>
+            <article className="metric"><span>Next arrival</span><strong>20 min</strong><small>From kitchen</small></article>
           </section>
 
           <section className="workspace-panel">
             <div className="section-heading">
-              <div><span className="eyebrow">Tracking</span><h2>Student / mess requests</h2></div>
+              <div><span className="eyebrow">From kitchens</span><h2>Peels & scraps available for pickup</h2></div>
               <span className="live-label"><span className="status-dot" /> Live</span>
             </div>
-            <p className="panel-note">Every student claim made from a kitchen's 15-minute window shows up here so NGO admin can track and verify it end to end.</p>
+            <p className="panel-note">Vegetable peels and leftovers that aren't fit for human consumption are routed here instead of the bin — the shelter can accept and pick them up directly.</p>
             <div className="activity-list">
-              {requests.map((r) => (
-                <div className="activity-row" key={r.id}>
-                  <div className="activity-icon"><span className="material-symbols-outlined">person</span></div>
-                  <div className="activity-copy"><strong>{r.name}</strong><span>{r.detail}</span></div>
-                  {r.status === "Pending review" ? (
-                    <button className="secondary-button" type="button" onClick={() => markVerified(r.id)}>Mark verified</button>
+              {scraps.map((s) => (
+                <div className="activity-row" key={s.id}>
+                  <div className="activity-icon"><span className="material-symbols-outlined">compost</span></div>
+                  <div className="activity-copy"><strong>{s.item}</strong><span>{s.detail}</span></div>
+                  {s.status === "Available" ? (
+                    <button className="secondary-button" type="button" onClick={() => acceptPickup(s.id)}>Accept pickup</button>
                   ) : (
-                    <span className="row-status">{r.status}</span>
+                    <span className="row-status">{s.status}</span>
                   )}
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section className="workspace-panel">
-            <div className="section-heading"><div><span className="eyebrow">Today</span><h2>Incoming support</h2></div></div>
-            <div className="activity-list">
-              {incoming.map(([title, detail, status]) => (
-                <div className="activity-row" key={title}>
-                  <div className="activity-icon"><span className="material-symbols-outlined">volunteer_activism</span></div>
-                  <div className="activity-copy"><strong>{title}</strong><span>{detail}</span></div>
-                  <span className="row-status">{status}</span>
                 </div>
               ))}
             </div>

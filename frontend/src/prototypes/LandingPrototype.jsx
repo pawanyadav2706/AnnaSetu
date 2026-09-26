@@ -8,16 +8,10 @@ const features = [
     text: "Kitchens log safe surplus quickly, with weight and temperature captured at source.",
   },
   {
-    image: "/modern_electric_temperature_controlled_delivery_van_with_green_and_white_eco/screen.png",
-    eyebrow: "02 · Match",
-    title: "Move it before it loses value.",
-    text: "Smart routing connects the right meal to the nearest partner and vehicle.",
-  },
-  {
     image: "/volunteers_and_staff_at_a_bright_clean_dignified_community_dining_center/screen.png",
-    eyebrow: "03 · Nourish",
+    eyebrow: "02 · Nourish",
     title: "Deliver with confidence.",
-    text: "Partners receive verified meals with a clear chain of custody from kitchen to community.",
+    text: "NGOs and shelters receive verified meals with a clear chain of custody from kitchen to community.",
   },
 ];
 
@@ -25,16 +19,15 @@ export default function LandingPrototype() {
   return (
     <div className="landing-page">
       <header className="landing-nav">
-        <a className="landing-brand" href="/prototype" aria-label="AnnaSetu home">
+        <a className="landing-brand" href="/" aria-label="AnnaSetu home">
           <img src="/annasetu_official_logo/screen.png" alt="AnnaSetu logo" />
           <span><strong>AnnaSetu</strong><small>Food rescue network</small></span>
         </a>
         <nav className="landing-links" aria-label="Main navigation">
           <a href="#how-it-works">How it works</a>
           <a href="#impact">Our impact</a>
-          <NavLink to="/prototype/demo">Live demo</NavLink>
         </nav>
-        <NavLink className="landing-nav-button" to="/prototype/demo">Explore the prototype <span className="material-symbols-outlined">arrow_forward</span></NavLink>
+        <NavLink className="landing-nav-button" to="/login">Login / Sign up <span className="material-symbols-outlined">arrow_forward</span></NavLink>
       </header>
 
       <main>
@@ -42,9 +35,9 @@ export default function LandingPrototype() {
           <div className="landing-hero-copy">
             <span className="landing-kicker"><span className="status-dot" /> A smarter way to share surplus</span>
             <h1>Good food should have a <em>next destination.</em></h1>
-            <p>AnnaSetu helps kitchens, delivery teams, and community organisations turn surplus food into safe, timely meals.</p>
+            <p>AnnaSetu helps kitchens and community organisations turn surplus food into safe, timely meals.</p>
             <div className="landing-actions">
-              <NavLink className="landing-primary" to="/prototype/demo">See the live workflow <span className="material-symbols-outlined">arrow_forward</span></NavLink>
+              <NavLink className="landing-primary" to="/login">Get started <span className="material-symbols-outlined">arrow_forward</span></NavLink>
               <a className="landing-text-link" href="#how-it-works">See how it works <span className="material-symbols-outlined">south</span></a>
             </div>
             <div className="landing-proof"><span className="material-symbols-outlined">verified</span><span>Designed for safe, fast, dignified redistribution</span></div>
@@ -68,12 +61,12 @@ export default function LandingPrototype() {
           <div className="feature-grid">{features.map((feature) => <article className="feature-card" key={feature.eyebrow}><img src={feature.image} alt="" /><div className="feature-card-copy"><span className="landing-kicker">{feature.eyebrow}</span><h3>{feature.title}</h3><p>{feature.text}</p></div></article>)}</div>
         </section>
 
-        <section className="landing-cta"><div><span className="landing-kicker">See the system in motion</span><h2>A clear path from kitchen to community.</h2></div><NavLink className="landing-primary" to="/prototype/demo">Open live demo <span className="material-symbols-outlined">arrow_forward</span></NavLink></section>
+        <section className="landing-cta"><div><span className="landing-kicker">Join the network</span><h2>A clear path from kitchen to community.</h2></div><NavLink className="landing-primary" to="/login">Login / Sign up <span className="material-symbols-outlined">arrow_forward</span></NavLink></section>
       </main>
       <footer className="landing-footer">
         <div className="footer-main">
           <div className="footer-brand-column">
-            <a className="landing-brand" href="/prototype" aria-label="AnnaSetu home">
+            <a className="landing-brand" href="/" aria-label="AnnaSetu home">
               <img src="/annasetu_official_logo/screen.png" alt="AnnaSetu logo" />
               <span><strong>AnnaSetu</strong><small>Food rescue network</small></span>
             </a>
@@ -84,9 +77,9 @@ export default function LandingPrototype() {
               <a href="tel:+914012345678" aria-label="Call AnnaSetu"><span className="material-symbols-outlined">call</span></a>
             </div>
           </div>
-          <div className="footer-column"><h3>Explore</h3><a href="#how-it-works">How it works</a><a href="#impact">Our impact</a><NavLink to="/prototype/demo">Live demo</NavLink></div>
-          <div className="footer-column"><h3>For partners</h3><NavLink to="/prototype/kitchen">Kitchen console</NavLink><NavLink to="/prototype/fleet">Fleet dispatch</NavLink><NavLink to="/prototype/ngo">NGO portal</NavLink></div>
-          <div className="footer-contact"><h3>Let’s work together</h3><p>Have a kitchen, community, or idea to connect?</p><a href="mailto:hello@annasetu.org" className="footer-email">hello@annasetu.org <span className="material-symbols-outlined">arrow_outward</span></a><span className="footer-location"><span className="material-symbols-outlined">location_on</span> Hyderabad, India</span></div>
+          <div className="footer-column"><h3>Explore</h3><a href="#how-it-works">How it works</a><a href="#impact">Our impact</a></div>
+          <div className="footer-column"><h3>For partners</h3><NavLink to="/login">Kitchen dashboard</NavLink><NavLink to="/login">Admin / NGO portal</NavLink><NavLink to="/login">Animal shelter portal</NavLink></div>
+          <div className="footer-contact"><h3>Let's work together</h3><p>Have a kitchen, community, or idea to connect?</p><a href="mailto:hello@annasetu.org" className="footer-email">hello@annasetu.org <span className="material-symbols-outlined">arrow_outward</span></a><span className="footer-location"><span className="material-symbols-outlined">location_on</span> Hyderabad, India</span></div>
         </div>
         <div className="footer-bottom"><span>© 2026 AnnaSetu. All rights reserved.</span><div><a href="#privacy">Privacy</a><a href="#terms">Terms</a><span>Made for a less wasteful world.</span></div></div>
       </footer>
