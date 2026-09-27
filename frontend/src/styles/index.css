@@ -405,3 +405,486 @@ h2 { margin-top: 5px; font-size: 22px; }
 .feature-chip .material-symbols-outlined {
   font-size: 18px;
 }
+/* Problem stats */
+.problem-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.problem-stat {
+  padding: 24px;
+  border: 1px solid var(--border-color, #dce4de);
+  border-radius: 14px;
+}
+.problem-stat strong { display: block; font-size: 2rem; color: var(--accent-color, #2f6b4f); }
+.problem-stat span { color: var(--text-muted, #5b6b60); font-size: 0.9rem; }
+
+/* Solution steps */
+.solution-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px;
+}
+.solution-step {
+  position: relative;
+  padding: 24px 20px;
+  border: 1px solid var(--border-color, #dce4de);
+  border-radius: 14px;
+}
+.solution-step .material-symbols-outlined { font-size: 26px; color: var(--accent-color, #2f6b4f); display: block; margin-bottom: 10px; }
+.solution-step h3 { margin: 0 0 6px; font-size: 1.05rem; }
+.solution-step p { margin: 0; font-size: 0.88rem; color: var(--text-muted, #5b6b60); }
+.solution-step-number {
+  position: absolute; top: 14px; right: 16px;
+  font-size: 0.75rem; font-weight: 700; color: var(--text-muted, #5b6b60);
+}
+
+/* Comparison table */
+.comparison-table { border: 1px solid var(--border-color, #dce4de); border-radius: 14px; overflow: hidden; }
+.comparison-row { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+.comparison-row + .comparison-row { border-top: 1px solid var(--border-color, #dce4de); }
+.comparison-row span { padding: 16px 18px; font-size: 0.9rem; }
+.comparison-head { background: rgba(47, 107, 79, 0.06); font-weight: 700; }
+.comparison-factor { font-weight: 600; }
+.comparison-annasetu { color: var(--accent-color, #2f6b4f); font-weight: 600; }
+
+/* Impact & benefits */
+.impact-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+.impact-benefit-card {
+  padding: 22px;
+  border: 1px solid var(--border-color, #dce4de);
+  border-radius: 14px;
+}
+.impact-benefit-card .material-symbols-outlined { font-size: 24px; color: var(--accent-color, #2f6b4f); display: block; margin-bottom: 8px; }
+.impact-benefit-card h3 { margin: 0 0 6px; font-size: 1rem; }
+.impact-benefit-card p { margin: 0; font-size: 0.88rem; color: var(--text-muted, #5b6b60); }
+
+@media (max-width: 720px) {
+  .comparison-row { grid-template-columns: 1fr; }
+  .comparison-row span:first-child { font-weight: 700; padding-bottom: 4px; }
+}
+/* Dashboard hero banner */
+.dashboard-hero {
+  border-radius: 18px;
+  padding: 40px 32px;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.dashboard-hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #d8ecdf;
+}
+.dashboard-hero h1 { margin: 4px 0 0; font-size: 2rem; }
+.dashboard-hero p { margin: 0 0 12px; color: #e7f1ea; max-width: 480px; }
+.dashboard-hero .primary-button { background: #fff; color: var(--accent-color, #2f6b4f); }
+
+/* Kanban workflow board */
+.kanban-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+.kanban-column {
+  background: rgba(47, 107, 79, 0.05);
+  border: 1px solid var(--border-color, #dce4de);
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.kanban-column-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-color, #2f6b4f);
+}
+.kanban-column-head .material-symbols-outlined { font-size: 18px; }
+.kanban-count {
+  margin-left: auto;
+  background: var(--accent-color, #2f6b4f);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 1px 8px;
+  border-radius: 999px;
+}
+.kanban-cards { display: flex; flex-direction: column; gap: 8px; }
+.kanban-card {
+  background: #fff;
+  border: 1px solid var(--border-color, #dce4de);
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.85rem;
+}
+.kanban-card strong { font-size: 0.88rem; }
+.kanban-card span { color: var(--text-muted, #5b6b60); font-size: 0.78rem; }
+.kanban-timer {
+  align-self: flex-start;
+  margin-top: 4px;
+  background: rgba(224, 122, 63, 0.12);
+  color: #e07a3f;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+.kanban-empty {
+  font-size: 0.8rem;
+  color: var(--text-muted, #5b6b60);
+  font-style: italic;
+  padding: 8px 0;
+}
+/* Source type badges */
+.source-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+}
+.source-badge .material-symbols-outlined { font-size: 14px; }
+.source-badge--inline { margin: 0 8px 0 0; vertical-align: middle; }
+.source-badge--institute { background: rgba(47, 107, 79, 0.12); color: #2f6b4f; }
+.source-badge--mess { background: rgba(37, 99, 235, 0.12); color: #2563eb; }
+.source-badge--function { background: rgba(168, 85, 247, 0.12); color: #a855f7; }
+
+/* Source picker (quick-add form) */
+.quick-add-panel { border: 1px solid var(--border-color, #dce4de); }
+.quick-add-form { display: flex; flex-direction: column; gap: 14px; }
+.source-picker { display: flex; flex-wrap: wrap; gap: 10px; }
+.source-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color, #dce4de);
+  background: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-muted, #5b6b60);
+}
+.source-pill.is-selected {
+  border-color: var(--accent-color, #2f6b4f);
+  background: rgba(47, 107, 79, 0.08);
+  color: var(--accent-color, #2f6b4f);
+}
+.quick-add-fields { display: flex; flex-wrap: wrap; gap: 10px; }
+.quick-add-fields input {
+  flex: 1;
+  min-width: 180px;
+  padding: 10px 14px;
+  border: 1px solid var(--border-color, #dce4de);
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+.quick-add-fields input:focus { outline: none; border-color: var(--accent-color, #2f6b4f); }
+
+/* Kanban visual polish */
+.kanban-board { align-items: start; }
+.kanban-column {
+  box-shadow: 0 1px 2px rgba(16, 40, 27, 0.04);
+  border-top: 3px solid var(--border-color, #dce4de);
+}
+.kanban-column--active { border-top-color: #94a3b8; }
+.kanban-column--open { border-top-color: #e07a3f; }
+.kanban-column--claimed { border-top-color: #2563eb; }
+.kanban-column--expired { border-top-color: #2f6b4f; }
+.kanban-card {
+  box-shadow: 0 1px 3px rgba(16, 40, 27, 0.06);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.kanban-card:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(16, 40, 27, 0.1); }
+
+/* Panel + section polish */
+.workspace-panel {
+  box-shadow: 0 1px 3px rgba(16, 40, 27, 0.04);
+}
+.activity-row {
+  transition: background 0.12s ease;
+}
+.activity-row:hover { background: rgba(47, 107, 79, 0.03); }
+/* Source type badges */
+.source-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+}
+.source-badge .material-symbols-outlined { font-size: 14px; }
+.source-badge--inline { margin: 0 8px 0 0; vertical-align: middle; }
+.source-badge--institute { background: rgba(47, 107, 79, 0.12); color: #2f6b4f; }
+.source-badge--mess { background: rgba(37, 99, 235, 0.12); color: #2563eb; }
+.source-badge--function { background: rgba(168, 85, 247, 0.12); color: #a855f7; }
+
+/* Quick-add form */
+.quick-add-panel { border: 1px solid var(--border-color, #dce4de); }
+.quick-add-form { display: flex; flex-direction: column; gap: 14px; }
+.source-picker { display: flex; flex-wrap: wrap; gap: 10px; }
+.source-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 14px; border-radius: 999px;
+  border: 1px solid var(--border-color, #dce4de);
+  background: #fff; font-size: 0.85rem; font-weight: 600;
+  cursor: pointer; color: var(--text-muted, #5b6b60);
+}
+.source-pill.is-selected {
+  border-color: var(--accent-color, #2f6b4f);
+  background: rgba(47, 107, 79, 0.08);
+  color: var(--accent-color, #2f6b4f);
+}
+.quick-add-fields { display: flex; flex-wrap: wrap; gap: 10px; }
+.quick-add-fields input {
+  flex: 1; min-width: 180px; padding: 10px 14px;
+  border: 1px solid var(--border-color, #dce4de);
+  border-radius: 10px; font-size: 0.9rem;
+}
+.quick-add-fields input:focus { outline: none; border-color: var(--accent-color, #2f6b4f); }
+
+/* Priority tier cards */
+.priority-tier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.priority-tier {
+  padding: 16px 18px;
+  border-radius: 14px;
+  border-left: 4px solid transparent;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(16, 40, 27, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.priority-tier--high { border-left-color: #dc2626; }
+.priority-tier--medium { border-left-color: #d97706; }
+.priority-tier--low { border-left-color: #2f6b4f; }
+.priority-tier-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted, #5b6b60); }
+.priority-tier-label em { font-style: normal; opacity: 0.7; }
+.priority-tier strong { font-size: 1.8rem; }
+.priority-tier-sub { font-size: 0.8rem; color: var(--text-muted, #5b6b60); }
+
+/* Stock toolbar */
+.stock-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.stock-filter-group { display: flex; gap: 8px; flex-wrap: wrap; }
+.stock-filter-chip {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color, #dce4de);
+  background: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-muted, #5b6b60);
+}
+.stock-filter-chip.is-active { background: var(--accent-color, #2f6b4f); border-color: var(--accent-color, #2f6b4f); color: #fff; }
+.stock-filter-chip--high.is-active { background: #dc2626; border-color: #dc2626; }
+.stock-filter-chip--medium.is-active { background: #d97706; border-color: #d97706; }
+.stock-search {
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 12px; border: 1px solid var(--border-color, #dce4de);
+  border-radius: 999px; min-width: 200px;
+}
+.stock-search .material-symbols-outlined { font-size: 18px; color: var(--text-muted, #5b6b60); }
+.stock-search input { border: none; outline: none; font-size: 0.85rem; flex: 1; }
+
+/* Stock table */
+.stock-table { border: 1px solid var(--border-color, #dce4de); border-radius: 14px; overflow: hidden; }
+.stock-table-row {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1.3fr 1.5fr 1.6fr;
+  gap: 12px;
+  padding: 14px 16px;
+  align-items: center;
+  font-size: 0.85rem;
+}
+.stock-table-row + .stock-table-row { border-top: 1px solid var(--border-color, #dce4de); }
+.stock-table-head { background: rgba(47, 107, 79, 0.06); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted, #5b6b60); }
+.stock-item-name { display: flex; flex-direction: column; gap: 2px; }
+.stock-item-name span { color: var(--text-muted, #5b6b60); font-size: 0.78rem; }
+.stock-item-qty { display: flex; flex-direction: column; gap: 2px; }
+.stock-item-qty span { color: var(--text-muted, #5b6b60); font-size: 0.78rem; }
+.stock-item-expiry { display: flex; align-items: center; gap: 6px; }
+.priority-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.priority-dot--high { background: #dc2626; }
+.priority-dot--medium { background: #d97706; }
+.priority-dot--low { background: #2f6b4f; }
+.priority-pill {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 4px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 700;
+}
+.priority-pill .material-symbols-outlined { font-size: 14px; }
+.priority-pill--high { background: rgba(220, 38, 38, 0.1); color: #dc2626; }
+.priority-pill--medium { background: rgba(217, 119, 6, 0.1); color: #d97706; }
+.priority-pill--low { background: rgba(47, 107, 79, 0.1); color: #2f6b4f; }
+.stock-item-prep { color: var(--text-muted, #5b6b60); font-size: 0.8rem; }
+.stock-empty { padding: 24px; text-align: center; color: var(--text-muted, #5b6b60); font-size: 0.85rem; }
+
+@media (max-width: 900px) {
+  .stock-table-row { grid-template-columns: 1fr; gap: 4px; }
+  .stock-table-head { display: none; }
+}
+
+/* Kanban visual polish */
+.kanban-column { box-shadow: 0 1px 2px rgba(16, 40, 27, 0.04); border-top: 3px solid var(--border-color, #dce4de); }
+.kanban-column--active { border-top-color: #94a3b8; }
+.kanban-column--open { border-top-color: #e07a3f; }
+.kanban-column--claimed { border-top-color: #2563eb; }
+.kanban-column--expired { border-top-color: #2f6b4f; }
+.kanban-card { box-shadow: 0 1px 3px rgba(16, 40, 27, 0.06); transition: transform 0.12s ease, box-shadow 0.12s ease; }
+.kanban-card:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(16, 40, 27, 0.1); }
+
+/* General panel polish */
+.workspace-panel { box-shadow: 0 1px 3px rgba(16, 40, 27, 0.04); }
+.activity-row { transition: background 0.12s ease; }
+.activity-row:hover { background: rgba(47, 107, 79, 0.03); }
+.row-status--pending {
+  background: rgba(217, 119, 6, 0.12);
+  color: #d97706;
+}
+
+/* =========================================================
+   Animal Shelter portal — extras
+   Reuses existing tokens (--green / --orange / --muted / --line)
+   so it matches Kitchen, Admin and the landing page exactly.
+   ========================================================= */
+
+/* Hero banner for the shelter intro — sits on .dashboard-hero
+   without needing a real photo; swap for a background-image
+   on .dashboard-hero itself whenever a shelter photo is ready. */
+.dashboard-hero--animal {
+  position: relative;
+  overflow: hidden;
+  background-image:
+    radial-gradient(circle at 88% 15%, rgba(255, 255, 255, 0.14), transparent 55%),
+    linear-gradient(135deg, #163c28 0%, var(--green) 60%, #3f9163 100%);
+}
+.dashboard-hero--animal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='%23ffffff'%3E%3Ccircle cx='30' cy='30' r='6'/%3E%3Ccircle cx='42' cy='22' r='4'/%3E%3Ccircle cx='20' cy='20' r='4'/%3E%3Cellipse cx='31' cy='44' rx='11' ry='9'/%3E%3Ccircle cx='90' cy='90' r='6'/%3E%3Ccircle cx='102' cy='82' r='4'/%3E%3Ccircle cx='80' cy='80' r='4'/%3E%3Cellipse cx='91' cy='104' rx='11' ry='9'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 110px 110px;
+}
+.dashboard-hero--animal > * { position: relative; z-index: 1; }
+.dashboard-hero--animal .dashboard-hero-kicker .material-symbols-outlined { font-size: 15px; }
+
+/* Waste-item thumbnail (real photo) with icon fallback if it 404s */
+.activity-thumb {
+  position: relative;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--green-soft);
+}
+.activity-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.activity-icon-fallback {
+  display: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background: var(--green-soft);
+  color: var(--green);
+}
+
+/* Why-this-is-safe tag under each waste item */
+.reason-tag {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: var(--orange-soft);
+  color: #a15d1c;
+  font-size: 10px;
+  font-weight: 700;
+  width: fit-content;
+}
+
+/* Accept / Decline sit together on the right of a scrap row */
+.activity-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+/* Decline — quiet by default, reads as a warning on hover */
+.ghost-button {
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.ghost-button:hover {
+  border-color: #c23b3b;
+  color: #c23b3b;
+}
+
+/* Row status modifiers, to sit alongside the default (green = accepted) */
+.row-status--declined {
+  background: rgba(197, 59, 59, 0.1);
+  color: #c23b3b;
+}
+.row-status--verified {
+  background: var(--green-soft);
+  color: var(--green);
+}
+
+@media (max-width: 480px) {
+  .activity-row { flex-wrap: wrap; }
+  .activity-actions { width: 100%; justify-content: flex-start; padding-left: 56px; margin-left: 0; }
+}
