@@ -23,8 +23,7 @@ const speciesAccepted = [
   { icon: "compost", label: "Overflow to compost pit" },
 ];
 
-// Waste items that are unfit for human consumption but perfectly safe
-// as animal feed — this is the core "nothing goes to waste" list.
+
 const initialScraps = [
   {
     id: 1,
@@ -170,9 +169,8 @@ export default function AnimalPrototype() {
               </div>
             </div>
             <p className="panel-note">
-              Aloo ke chilke, dhaniya ki dandi, sabzi ke chhilke jaisi cheezein insano ke khane layak nahi hoti, lekin
-              wo bekaar bhi nahi hain — yeh sab poshan se bhare hote hain aur animals ke liye ekdum safe feed ban sakte
-              hain. AnnaSetu inhe seedha kitchen se shelter tak track karta hai, taaki koi bhi cheez landfill me na jaaye.
+              Things like potato peels, coriander stems, and vegetable scraps may not be suitable for human consumption, but they are not useless. They are rich in nutrients and can be safely converted into feed for animals. AnnaSetu tracks these food scraps directly from kitchens to shelters, ensuring that nothing ends up in landfills.
+
             </p>
           </section>
 
